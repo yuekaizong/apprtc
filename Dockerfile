@@ -41,7 +41,7 @@ RUN echo -e "$GOPATH/bin/collidermain -port=8089 -tls=true -room-server=http://l
 ENV STUNNEL_VERSION 5.60
 
 WORKDIR /usr/src
-RUN curl  https://www.stunnel.org/downloads/stunnel-${STUNNEL_VERSION}.tar.gz --output stunnel.tar.gz\
+RUN curl  https://www.stunnel.org/archive/5.x/stunnel-${STUNNEL_VERSION}.tar.gz --output stunnel.tar.gz\
     && tar -xf /usr/src/stunnel.tar.gz
 WORKDIR /usr/src/stunnel-${STUNNEL_VERSION}
 RUN ./configure --prefix=/usr && make && make install
@@ -78,7 +78,7 @@ CMD /go/start.sh
 #   The '-p' options are port mappings to the GAE app and Collider instances, the host ones can be changed.
 #
 # - On the same machine that this docker image is running on you can now join apprtc calls using 
-#   https://localhost:8080/?wshpp=localhost:8089&wstls=true,  once you join the URL will have 
+#   https://localhost/?wshpp=localhost:8089&wstls=true,  once you join the URL will have 
 #   appended the room name which you can share, e.g. 'http://localhost:8080/r/315402015?wshpp=localhost:8089&wstls=true'. 
 #   If you want to connect to this instance from another machine, use the IP address of the machine running this docker container 
 #   instead of localhost.
