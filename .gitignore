@@ -14,4 +14,4 @@ validation-report.json
 validation-status.json
 **/.idea
 yarn.lock
-package-lock.json
+**/package-lock.json

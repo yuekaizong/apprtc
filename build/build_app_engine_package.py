@@ -81,7 +81,8 @@ def CopyApprtcSource(src_path, dest_path):
 
     if dirpath.endswith('html'):
       dest_html_path = os.path.join(dest_path, 'html')
-      os.makedirs(dest_html_path)
+      if not os.path.exists(dest_html_path):
+        os.makedirs(dest_html_path)
       for name in files:
         # Template files must be in the root directory.
         if name.endswith('_template.html'):
