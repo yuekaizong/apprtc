@@ -25,11 +25,11 @@ ICE_SERVER_OVERRIDE = None
 # ICE_SERVER_OVERRIDE  = [
 #   {
 #     "urls": [
-#       "turn:hostname/IpToTurnServer:19305?transport=udp",
-#       "turn:hostname/IpToTurnServer:19305?transport=tcp"
+#       "turn:im.circle-im.com:3478?transport=udp",
+#       "turn:im.circle-im.com:3478?transport=tcp"
 #     ],
-#     "username": "TurnServerUsername",
-#     "credential": "TurnServerCredentials"
+#     "username": "tsuser",
+#     "credential": "k95jkHrel86gD3"
 #   },
 #   {
 #     "urls": [
