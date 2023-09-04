@@ -15,3 +15,5 @@ validation-status.json
 **/.idea
 yarn.lock
 **/package-lock.json
+**/collider.exe
+**/go.sum
